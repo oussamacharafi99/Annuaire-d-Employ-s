@@ -3,13 +3,24 @@
 
   
   <servlet>
-  <servlet-name>EmOne</servlet-name>
-  <servlet-class>com.Employes.servlets.EmOne</servlet-class>
+  <servlet-name>Ajouter</servlet-name>
+  <servlet-class>com.Employes.servlets.Ajouter</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  <servlet-name>EmOne</servlet-name>
-  <url-pattern>/Add-Employees</url-pattern>
+  <servlet-name>Ajouter</servlet-name>
+  <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>Afficher</servlet-name>
+  <servlet-class>com.Employes.servlets.Afficher</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Afficher</servlet-name>
+  <url-pattern>/afficher</url-pattern>
   </servlet-mapping>
   
 </web-app>

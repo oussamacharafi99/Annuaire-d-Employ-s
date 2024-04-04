@@ -3,19 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" href="style.css">
-<title>main</title>
 <%@ include file="Bootstrap.jsp" %>
+<meta charset="ISO-8859-1">
+<title>afficher</title>
 </head>
 <body>
 <%@ include file="header.jsp" %>
-<h1>Add Employee !</h1>
-<form action="EmOne" method="post">
 
-
-</form>
-
+<h1>page afficher </h1>
 
 </body>
 </html>
