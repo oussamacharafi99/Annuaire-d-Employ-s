@@ -1,6 +1,17 @@
 package com.Employes.servlets;
 
 public class Employee {
+	public Employee(String id, String name, String email, String phone, String departement, String post) {
+		this.id=id;
+		this.name = name;
+		this.email= email;
+		this.phone = phone;
+		this.departement = departement;
+		this.post = post;
+		
+	}
+
+
 	public String getName() {
 		return name;
 	}
@@ -42,24 +53,14 @@ public class Employee {
 	public void setPost(String post) {
 		this.post = post;
 	}
-
+	private String id;
 	private String name;
 	private String email;
 	private String phone;
 	private String departement;
 	private String post;
 	
-	Employee(){
-		
-	}
-	Employee(String name, String email, String phone, String departement, String post ){
-		this.name = name;
-		this.email= email;
-		this.phone = phone;
-		this.departement = departement;
-		this.post = post;
-		
-	}
+	
 
 
 	public String getPhone() {
@@ -69,6 +70,16 @@ public class Employee {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+
+	public String getId() {
+		return id;
+	}
+
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 

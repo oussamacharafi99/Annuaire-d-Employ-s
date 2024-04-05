@@ -30,23 +30,7 @@ public class Ajouter extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Employee> Array = new ArrayList<Employee>();
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
-		String phone = request.getParameter("phone");
-		String departement = request.getParameter("departement");
-		String post = request.getParameter("post");
-		Array.add(new Employee(name, email , phone, departement, post));
-		if(Array.size() > 0 ) {
-			for(Employee e :Array) {
-				System.out.println(e.getName());
-			}
-			response.sendRedirect("afficher");
-		}
-		else {
-			System.out.println("not ok");
-		}
-		
+
 	}
 
 
