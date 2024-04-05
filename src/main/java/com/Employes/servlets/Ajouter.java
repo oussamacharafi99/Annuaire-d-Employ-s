@@ -1,11 +1,15 @@
 package com.Employes.servlets;
-
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 @WebServlet("/Ajouter")
 public class Ajouter extends HttpServlet {
@@ -20,16 +24,30 @@ public class Ajouter extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String name = "oussama";
-		request.setAttribute("name", name);
-		
+	
 		this.getServletContext().getRequestDispatcher("/WEB-INF/ajouter.jsp").forward(request, response);
 		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<Employee> Array = new ArrayList<Employee>();
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		String departement = request.getParameter("departement");
+		String post = request.getParameter("post");
+		Array.add(new Employee(name, email , phone, departement, post));
+		if(Array.size() > 0 ) {
+			for(Employee e :Array) {
+				System.out.println(e.getName());
+			}
+			response.sendRedirect("afficher");
+		}
+		else {
+			System.out.println("not ok");
+		}
 		
 	}
+
 
 }

@@ -1,10 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
-<header class="navbar navbar-expand-md navbar-dark bg-dark text-light">
+<style>
+     body{
+	     width:100%;
+	     height:100vh;
+	     background: #222;	    
+	     color:white; 
+	     }
+</style>
+
+<header class="navbar navbar-expand-md navbar-dark bg-transparent text-light">
 
 	<div class="container">
-		<h1 class="navbar-brand text-light">Logo</h1>
+		<h2 class="navbar-brand text-light">Logo</h2>
 		
 		<button type="button"
 		class="navbar-toggler"
@@ -16,9 +25,9 @@
 		
 		<div class="collapse navbar-collapse" id="mainMenu">
 		<ul class="navbar-nav ms-auto">
-			<li class="nav-item"><a class="nav-link text-light" href="" > Ajouter</a></li>
-			<li class="nav-item"><a class="nav-link text-light" href=""> Afficher</a></li>
-			<li class="nav-item"><a class="nav-link text-light" href=""> à propos</a></li>
+			<li class="nav-item"><a class="nav-link text-light" href="ajouter" > Ajouter</a></li>
+			<li class="nav-item"><a class="nav-link text-light" href="afficher"> Afficher</a></li>
+			<li class="nav-item"><a class="nav-link text-light" href="about"> à propos</a></li>
 		</ul>
 		
 		</div>
