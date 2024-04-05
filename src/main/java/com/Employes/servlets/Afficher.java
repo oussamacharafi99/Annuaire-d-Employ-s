@@ -21,13 +21,12 @@ public class Afficher extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		this.getServletContext().getRequestDispatcher("/WEB-INF/afficher.jsp").forward(request, response);
-		
-	
-	}
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("id");
+        Array.removeIf(emp -> emp.getId().equals(id));
+        request.setAttribute("emps", Array);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/afficher.jsp").forward(request, response);
+    }
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
@@ -54,14 +53,6 @@ public class Afficher extends HttpServlet {
 	
 	
 
-		protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("id");
-
-        Array.removeIf(emp -> emp.getId().equals(id));
-        request.setAttribute("emps", Array);
-        this.getServletContext().getRequestDispatcher("/WEB-INF/afficher.jsp").forward(request, response);
-        
-		}
 		
 		
 		
