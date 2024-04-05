@@ -34,12 +34,28 @@
                           <td>${emp.getPhone()}</td>
                             <td>${emp.getDepartement()}</td>
                            <td>${emp.getPost()}</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm">Modifier</a>
+                            <a href="Afficher?id=${emp.getId()}" class="btn btn-danger btn-sm">Supprimer</a>
+                        </td>
+                        
                       </tr>
                       </c:forEach>
             </table>
         </div>
     </div>
+    
+    <p id="isAbleToAdd" >${  isAbleToAdd }</p>
 </div>
+
+<script>
+
+let isAbleToAdd =  document.getElementById("isAbleToAdd");
+if(isAbleToAdd.innerHTML == "."){
+	alert("!!!!!!!!!");
+}
+
+</script>
 
 
 

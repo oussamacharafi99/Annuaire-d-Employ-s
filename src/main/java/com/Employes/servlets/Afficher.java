@@ -34,6 +34,9 @@ public class Afficher extends HttpServlet {
 		
 		String id =request.getParameter("id");
 		if(Array.stream().anyMatch(emp -> emp.getId().equals(id))) {
+			request.setAttribute("isAbleToAdd",".");
+			request.setAttribute("emps",Array);
+			this.getServletContext().getRequestDispatcher("/WEB-INF/afficher.jsp").forward(request, response);
 			
 		}else {	
 		String name = request.getParameter("name");
@@ -48,5 +51,18 @@ public class Afficher extends HttpServlet {
 		this.getServletContext().getRequestDispatcher("/WEB-INF/afficher.jsp").forward(request, response);
 		}
 	}
+	
+	
 
+		protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("id");
+
+        Array.removeIf(emp -> emp.getId().equals(id));
+        request.setAttribute("emps", Array);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/afficher.jsp").forward(request, response);
+        
+		}
+		
+		
+		
 }
