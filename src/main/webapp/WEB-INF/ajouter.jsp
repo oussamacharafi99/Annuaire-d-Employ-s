@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<%@ include file="Bootstrap.jsp" %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 
 <!-- style Css for this page  -->
 <style type="text/css">
@@ -63,11 +66,11 @@
 <form method="POST" action="afficher">
 <div class="form-group my-2">
     <label for="id">id</label>
-    <input type="Number" name="id" class="form-control" id="id" aria-describedby="id" placeholder="Enter id">
+    <input type="Number" name="id" class="form-control" id="id" aria-describedby="id" placeholder="Enter id" >
   </div>
 <div class="form-group my-2">
     <label for="username">User Name</label>
-    <input type="text" name="name" class="form-control" id="username" aria-describedby="UserName" placeholder="Enter Full Name">
+    <input type="text" name="name" class="form-control" id="username" aria-describedby="UserName" placeholder="Enter Full Name" >
   </div>
   <div class="form-group my-2">
     <label for="exampleInputEmail1">Email address</label>
@@ -75,10 +78,10 @@
   </div>
   <div class="form-group my-2">
     <label for="phone">Phone Number</label>
-    <input type="number" name="phone" class="form-control" id="phone" aria-describedby="PhoneNumber" placeholder="Enter Phone">
+    <input type="number" name="phone" class="form-control" id="phone" aria-describedby="PhoneNumber" placeholder="Enter Phone" >
   </div>
   <div class="form-group my-2">
-    <label for="departement">Departement</label>
+    <label for="departement">Department</label>
     <input type="text" name="departement" class="form-control" id="departement" aria-describedby="Departement" placeholder="Enter Departement">
   </div>
   <div class="form-group my-2">
@@ -89,6 +92,6 @@
   <input type="submit" name="" value="Submit" class="btn btn-outline-primary">
 </form>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

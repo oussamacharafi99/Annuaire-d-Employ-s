@@ -24,7 +24,6 @@ public class Ajouter extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 		this.getServletContext().getRequestDispatcher("/WEB-INF/ajouter.jsp").forward(request, response);
 		
 	}

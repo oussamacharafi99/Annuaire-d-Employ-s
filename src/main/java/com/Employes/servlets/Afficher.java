@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Afficher")
 public class Afficher extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	List<Employee> Array = new ArrayList<Employee>();
+	static List<Employee> Array = new ArrayList<Employee>();
 
     public Afficher() {
         super();
@@ -26,10 +26,12 @@ public class Afficher extends HttpServlet {
         Array.removeIf(emp -> emp.getId().equals(id));
         request.setAttribute("emps", Array);
         this.getServletContext().getRequestDispatcher("/WEB-INF/afficher.jsp").forward(request, response);
+        
     }
+    
+    
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
 		
 		String id =request.getParameter("id");
 		if(Array.stream().anyMatch(emp -> emp.getId().equals(id))) {
