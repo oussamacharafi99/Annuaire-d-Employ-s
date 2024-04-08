@@ -60,7 +60,7 @@
 <h1>Update Employee</h1>
 <hr>
 
-<form method="POST" action="update?id=${emp.getId()}">
+<form method="POST" action="update">
     <div class="form-group">
         <label for="id">ID</label>
         <input type="number" name="id" class="form-control" id="id" placeholder="Enter ID" value="${emp.getId()}" readonly>
@@ -79,7 +79,7 @@
     </div>
     <div class="form-group">
         <label for="department">Department</label>
-        <input type="text" name="department" class="form-control" id="department" placeholder="Enter Department" value="${emp.getDepartment()}">
+        <input type="text" name="departement" class="form-control" id="department" placeholder="Enter Department" value="${emp.getDepartement()}">
     </div>
     <div class="form-group">
         <label for="post">Post</label>

@@ -1,5 +1,4 @@
 package com.Employes.servlets;
-
 import java.io.IOException;
 import java.util.stream.Collectors;
 
@@ -22,12 +21,17 @@ public class Update extends HttpServlet {
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
-		request.setAttribute("emps", Afficher.Array.stream().filter(emps -> emps.getId().equals(id)).collect(Collectors.toList()).get(0));
+		for(Employee emps : Afficher.Array) {
+			if(emps.getId().equals(id)) {
+				request.setAttribute("emp", emps);
+			}
+		}
 		this.getServletContext().getRequestDispatcher("/WEB-INF/update.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		    String id = request.getParameter("id");
+		    
 		    String name = request.getParameter("name");
 		    String email = request.getParameter("email");
 		    String phoneNumber = request.getParameter("phone");
